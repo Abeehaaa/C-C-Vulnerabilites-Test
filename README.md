@@ -4,7 +4,7 @@ This repository contains C example programs purposely crafted to help test and v
 ## Includes:
 - secrets.c (contains three dummy keys)
 - file1.c (unsafe string usage examples)
-- file6.c (format-string example)
+- Calculator-file.c (format-string example)
 - other example C files for varied patterns
 
 ### Quick use:
