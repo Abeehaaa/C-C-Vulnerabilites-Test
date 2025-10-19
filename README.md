@@ -1,5 +1,3 @@
-README.md
-
 This repository contains small C examples for testing scanners.
 Purpose: detect dangerous C functions and hard-coded secrets.
 
