@@ -1,22 +1,23 @@
+#Test Repo for C files
 This repository contains small C examples for testing scanners.
 Purpose: detect dangerous C functions and hard-coded secrets.
 
-Includes:
+##Includes:
 - secrets.c (contains three dummy keys)
 - file1.c (unsafe string usage examples)
 - file6.c (format-string example)
 - other example C files for varied patterns
 
-Quick use:
+###Quick use:
 1. Compile: gcc -Wall -o secrets secrets.c
 2. Run: ./secrets
 
-What it tests:
+##What it tests:
 - gets(), strcpy(), strcat(), sprintf() — buffer overflow risks
 - printf(user_input) — format string risk
 - Hard-coded API keys, tokens, SSH blocks
 
-Safety notes:
+###Safety notes:
 - All keys in this repo are fake/dummy.
 - Do NOT commit real credentials. If leaked, rotate immediately.
 
