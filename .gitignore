@@ -1,0 +1,34 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Env & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+id_rsa
+id_rsa.pub
+secrets_example.txt
+secrets_report.txt
+secrets_demo.c
+
+# Build / OS
+dist/
+build/
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
