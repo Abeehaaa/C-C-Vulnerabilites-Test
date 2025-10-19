@@ -1,6 +1,5 @@
 # Test Repo for C files
-This repository contains small C examples for testing scanners.
-Purpose: detect dangerous C functions and hard-coded secrets.
+This repository contains C example programs purposely crafted to help test and validate tools that **detect dangerous C functions** and **hard-coded secrets / credentials** in source code.
 
 ## Includes:
 - secrets.c (contains three dummy keys)
@@ -21,10 +20,10 @@ Purpose: detect dangerous C functions and hard-coded secrets.
 - All keys in this repo are fake/dummy.
 - Do NOT commit real credentials. If leaked, rotate immediately.
 
-Fix suggestions:
+### Fix suggestions:
 - Use fgets, snprintf, printf("%s", input)
 - Use environment variables or secret manager for real keys
 
-Organization:
+## Organization:
 - Put intentionally vulnerable examples under examples/vulns/
 - Mark files with a warning comment at top
