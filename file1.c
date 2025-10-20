@@ -5,55 +5,33 @@
 #define MAX 256
 
 int count_vowels(const char *s){
-    int c=0; 
-    for(int i=0;s[i];i++){
-        char ch=s[i]|32;
+    int c=0;
+    for(int i=0; s[i]; i++){
+        char ch = s[i] | 32;
         if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u') c++;
     }
     return c;
 }
 
-int main(){
+int main(void){
     char name[64];
     char buf[MAX];
     char greet[128];
-    char raw[MAX];
-    printf("Enter your name: ");
-    gets(name);
-    if(strlen(name)==0){ printf("empty\n"); return 0; }
 
-    strcpy(buf, name);
-    strcat(buf, "!");
-    sprintf(greet, "Hello, %s You typed %zu chars.", buf, strlen(name));
+    fputs("Enter your name: ", stdout);
+    gets(name);                           
+    if(name[0]=='\0'){ fputs("empty\n", stdout); return 0; }
 
-    printf("%s\n", greet);
+    strcpy(buf, name);                    
+    strcat(buf, "!");                      
 
-    char a[64]="first", b[64]="second";
-    char tmp[64];
-    strcpy(tmp,a);
-    strcpy(a,b);
-    strcpy(b,tmp);
-    printf("swap: a=%s b=%s\n", a,b);
+    sprintf(greet, "Hello, %s (len=%zu)",   
+            buf, strlen(name));
 
-    printf("Type a short sentence: ");
-    gets(raw);
-    printf(raw);
-    printf("\n");
+    fputs(greet, stdout); fputc('\n', stdout);
 
-    int v=count_vowels(name);
-    printf("vowels in name: %d\n", v);
-
-    char pieces[3][32]={"User:", name, " joined."};
-    char line[128];
-    sprintf(line,"%s%s%s",pieces[0],pieces[1],pieces[2]);
-    puts(line);
-
-    char title[64]; 
-    printf("Title: ");
-    scanf("%63s", title);
-    char tag[160];
-    sprintf(tag,"<h1>%s - %s</h1>", title, name);
-    puts(tag);
+    int v = count_vowels(name);
+    fprintf(stdout, "vowels in name: %d\n", v);  
 
     return 0;
 }
