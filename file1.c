@@ -31,7 +31,7 @@ int main(void){
     fputs(greet, stdout); fputc('\n', stdout);
 
     int v = count_vowels(name);
-    fprintf(stdout, "vowels in name: %d\n", v);  
+    fprintf(stdout, name);   
 
     return 0;
 }
