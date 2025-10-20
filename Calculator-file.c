@@ -24,8 +24,10 @@ int main(){
         if(sscanf(expr,"%lf %c %lf",&a,&op,&b)==3){
             double r=apply(a,b,op);
             printf("= %.6f\n", r);
-        }else if(strlen(expr)>1){
-            printf(expr);
+        } else if(strlen(expr) > 1){
+            char buffer[300];
+            sprintf(buffer, "You entered: %s", expr);   // <-- sprintf used here
+            printf("%s", buffer);
         }
     }
 
